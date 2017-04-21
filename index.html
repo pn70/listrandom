@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ListRandom</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="interactionUI">
+        <div id="toolbar">
+            <p>
+                <span id="tbLeft"><i id="buttonSettings" class="button fa fa-cogs fa-2x"></i>
+                <i id="buttonClear" class="button fa fa-file-o fa-2x" onclick="runApp.clearTextarea()"></i></span>
+                <span id="tbRight"><i id="buttonRnd" class="button fa fa-random fa-2x" onclick="runApp.showResult()"></i></span>
+            </p>
+        </div>
+        <textarea id="theList" autofocus></textarea>
+    </div>
+    <div id="viewResult"><span id="resultText"></span></div>
+    <div id="settingsModal" class="modal">
+        <div class="modalContent">
+            <div class="modalHeader">
+                Settings
+                <span class="close">&times;</span>
+            </div>
+            <div class="modalSettingsControls">
+                <p>
+                    <input type="checkbox" id="useRandCol" onchange="runApp.applySettings()">
+                    Use random background colours
+                </p>
+                <p>
+                    <span>Colour hue</span>
+                    <input type="range" id="colHue" min="0" max="360" value="205" onchange="runApp.applySettings()">
+                </p>
+                <p>
+                    <span>Colour saturation</span>
+                    <input type="range" id="colSat" min="0" max="100" value="40" onchange="runApp.applySettings()">
+                </p>
+                <p>
+                    <span>Colour lightness</span>
+                    <input type="range" id="colLight" min="0" max="100" value="40" onchange="runApp.applySettings()">
+                </p>
+                <p>
+                    <span>List shuffle time</span>
+                    <input type="range" id="ShufTime" min="2000" max="8000" value="4000" onchange="runApp.applySettings()">
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="js/listrandom.js"></script>
+</body>
+</html>
