@@ -89,8 +89,11 @@ h1 {
 /* viewResult */
 #viewResult {
     height: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-shadow: 2px 2px 7px hsla(0, 0%, 0%, 0.5);
-    padding: 7%;
 }
 
 /* viewResult text */
