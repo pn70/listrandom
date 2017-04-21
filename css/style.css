@@ -55,6 +55,7 @@ h1 {
     color: #fff;
     box-shadow: 1px 1px 3px hsla(0, 0%, 0%, 0.3);
     text-shadow: 1px 1px 3px hsla(0, 0%, 0%, 0.5);
+    font-family: inherit;
 }
 
 /* toolbar */
