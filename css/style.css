@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css?family=Droid+Sans');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+
+/* CSS Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    font-family: 'Droid Sans', sans-serif;
+}
+
+/* html body */
+html, body, #interactionUI {
+    height: 100%;
+    text-align: center;
+    overflow: hidden;
+    transition: background-color 0.3s;
+    color: #fff;
+    text-shadow: 1px 1px 3px hsla(0, 0%, 0%, 0.4);
+}
+
+/* h1 */
+h1 {
+    font-size: 2em;
+}
+
+/* theList */
+#theList {
+    width: 80%;
+    height: 70%;
+    margin: 20px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid hsla(0, 0%, 100%, 0.7);
+    border-radius: 4px;
+    background-color: hsla(0, 0%, 100%, 0.1);
+    font-size: 2.5em;
+    text-align: left;
+    resize: none;
+    color: #fff;
+    box-shadow: 1px 1px 3px hsla(0, 0%, 0%, 0.3);
+    text-shadow: 1px 1px 3px hsla(0, 0%, 0%, 0.5);
+}
+
+/* toolbar */
+#toolbar {
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+#tbLeft {
+    float: left;
+}
+
+#tbRight {
+    float: right;
+}
+
+.button {
+    cursor:pointer;
+}
+
+#buttonClear {
+    margin-left: 10px;
+}
+
+/* interactionUI */
+#interactionUI {
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+/* viewResult */
+#viewResult {
+    height: 100%;
+    text-shadow: 2px 2px 7px hsla(0, 0%, 0%, 0.5);
+    padding: 7%;
+}
+
+/* viewResult text */
+#resultText {
+    margin-bottom: 25%;
+    cursor: default;
+}
+
+/* Modal background */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+    -webkit-animation-name: fadeIn;
+    -webkit-animation-duration: 0.4s;
+    animation-name: fadeIn;
+    animation-duration: 0.4s
+}
+
+/* Modal content */
+.modalContent {
+    top: 10;
+    width: 40%;
+    min-width: 310px;
+    max-width: 350px;
+    border: 2px solid hsla(0, 0%, 100%, 0.5);
+    border-radius: 4px;
+    background-color: hsla(0, 0%, 100%, 0.9);
+    -webkit-animation-name: slideIn;
+    -webkit-animation-duration: 0.4s;
+    animation-name: slideIn;
+    animation-duration: 0.4s;
+    text-shadow: none;
+    text-align: left;
+    margin: 10px auto 0 auto;
+}
+
+/* Modal header */
+.modalHeader {
+    background-color: hsl(205, 40%, 40%);
+    min-height: 20px;
+    padding: 8px;
+    vertical-align: center;
+    font-size: 1em;
+    text-align: center;
+}
+
+.close {
+    color: hsla(0, 0%, 100%, 0.8);
+    float: right;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Modal settings controls*/
+.modalSettingsControls {
+    padding: 16px;
+}
+
+.modalSettingsControls p{
+    color: #444;
+    margin: 8px;
+}
+
+.modalSettingsControls p:last-child{
+    margin-top: 28px;
+}
+
+.modalSettingsControls p span{
+    display: inline-block;
+    min-width: 140px;
+}
+
+input[type=checkbox] {
+    position: relative;
+    top: 2px;
+}
+
+input[type=range] {
+    position: relative;
+    top: 3px;
+    width: 80%;
+}
+
+/* Modal animations*/
+@-webkit-keyframes slideIn {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+}
+
+@keyframes slideIn {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+}
+
+@-webkit-keyframes fadeIn {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0}
+    to {opacity: 1}
+}
